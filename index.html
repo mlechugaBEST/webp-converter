@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebP Converter — Best Access Doors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <svg
+          class="logo-icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect width="40" height="40" fill="#000000" />
+          <rect
+            x="8"
+            y="6"
+            width="24"
+            height="28"
+            rx="1"
+            stroke="#FFD200"
+            stroke-width="2"
+            fill="none"
+          />
+          <circle cx="26" cy="20" r="2" fill="#FFD200" />
+        </svg>
+        <span class="logo-text">Best Access Doors</span>
+        <span class="logo-sub">WebP Converter</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>JPG &amp; PNG <span class="accent">→ WebP</span></h1>
+        <p class="hero-sub">
+          Convert product images in bulk — no upload, no server, files stay on
+          your machine.
+        </p>
+      </section>
+
+      <div id="dropzone" role="region" aria-label="File drop zone">
+        <svg
+          class="drop-icon"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M24 8v24M14 22l10-14 10 14"
+            stroke="#498CBC"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 36h32"
+            stroke="#498CBC"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+        <p class="drop-main">Drop images or a folder here</p>
+        <p class="drop-or">— or —</p>
+        <div class="drop-buttons">
+          <label class="btn btn-primary">
+            Select Files
+            <input
+              id="file-input"
+              type="file"
+              accept="image/jpeg,image/png"
+              multiple
+              hidden
+            />
+          </label>
+          <label class="btn btn-secondary">
+            Select Folder
+            <input
+              id="folder-input"
+              type="file"
+              webkitdirectory
+              multiple
+              hidden
+            />
+          </label>
+        </div>
+        <p class="drop-hint">
+          Accepts .jpg, .jpeg, .png — drag a folder for bulk conversion
+        </p>
+      </div>
+
+      <div id="controls" hidden>
+        <label class="quality-label">
+          <span>Quality</span>
+          <input id="quality" type="range" min="1" max="100" value="85" />
+          <output id="quality-display">85</output><span>%</span>
+        </label>
+        <p class="control-hint">
+          Adjust before or after dropping — results update automatically.
+        </p>
+      </div>
+
+      <ul id="file-list" aria-live="polite"></ul>
+
+      <div id="summary" hidden>
+        <span id="summary-text"></span>
+        <button id="download-btn" class="btn btn-yellow">Download ZIP</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Best Access Doors &mdash; Internal Tool</p>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
