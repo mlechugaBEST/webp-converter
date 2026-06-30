@@ -1,10 +1,10 @@
 const list = () => document.getElementById('file-list')
 
-export function addFileRow(id, name) {
+export function addFileRow(id, outName) {
   const li = document.createElement('li')
   li.id = `row-${id}`
   li.innerHTML = `
-    <span class="row-name" title="${name}">${name.replace(/\.(jpe?g|png)$/i, '.webp')}</span>
+    <span class="row-name" title="${outName}">${outName}</span>
     <span class="row-sizes" id="sizes-${id}"></span>
     <span class="badge badge-pending" id="badge-${id}">Pending</span>
   `
