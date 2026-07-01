@@ -11,7 +11,7 @@ Internal tool for bulk-converting JPG/PNG product images to WebP format. Runs en
 - Drag-and-drop files or a folder
 - Bulk conversion (entire folders at once)
 - Quality slider (1–100) with live re-conversion — adjust after dropping, results update automatically
-- Output filenames include quality suffix (e.g. `banner_q85.webp`)
+- Output filenames match the original name (just `.webp` extension)
 - Size comparison per file (original → WebP, % saved)
 - Download all converted files as a ZIP
 

@@ -18,7 +18,7 @@ qualityEl.addEventListener("input", () => {
   qualityDisplay.value = qualityEl.value;
   if (!lastFiles.length) return;
   clearTimeout(debounceTimer);
-  debounceTimer = setTimeout(() => handleFiles(lastFiles), 1000);
+  debounceTimer = setTimeout(() => handleFiles(lastFiles), 1250);
 });
 
 downloadBtn.addEventListener("click", () => downloadZip(pendingResults));
@@ -34,12 +34,11 @@ async function handleFiles(files) {
   summary.hidden = true;
   controls.hidden = false;
 
-  const qualityInt = parseInt(qualityEl.value, 10);
-  const quality = qualityInt / 100;
+  const quality = parseInt(qualityEl.value, 10) / 100;
 
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    const outName = file.name.replace(/\.(jpe?g|png)$/i, `_q${qualityInt}.webp`);
+    const outName = file.name.replace(/\.(jpe?g|png)$/i, ".webp");
     addFileRow(i, outName);
     setRowStatus(i, "converting");
 
